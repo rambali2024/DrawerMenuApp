@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C53727B2BBD850B000DAAF9 /* SlideAnimationDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C53727A2BBD850B000DAAF9 /* SlideAnimationDirection.swift */; };
 		CEACCA2E2537474B003F6B23 /* DrawerProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACCA2C2537474B003F6B23 /* DrawerProfileCell.swift */; };
 		CEACCA2F2537474B003F6B23 /* DrawerProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEACCA2D2537474B003F6B23 /* DrawerProfileCell.xib */; };
 		CEACCA34253747E2003F6B23 /* DrawerMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACCA32253747E2003F6B23 /* DrawerMenuCell.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C53727A2BBD850B000DAAF9 /* SlideAnimationDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideAnimationDirection.swift; sourceTree = "<group>"; };
 		CEACCA2C2537474B003F6B23 /* DrawerProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerProfileCell.swift; sourceTree = "<group>"; };
 		CEACCA2D2537474B003F6B23 /* DrawerProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawerProfileCell.xib; sourceTree = "<group>"; };
 		CEACCA32253747E2003F6B23 /* DrawerMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuCell.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				CEC36DDF251F7C0300336F8B /* DrawerTransitionManager.swift */,
 				CEC36DE2251F7C8700336F8B /* DrawerPresentationController.swift */,
 				CEC36DE5251F7D1600336F8B /* DrawerSlideAnimation.swift */,
+				7C53727A2BBD850B000DAAF9 /* SlideAnimationDirection.swift */,
 			);
 			path = DrawerTransitionManager;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEACCA2E2537474B003F6B23 /* DrawerProfileCell.swift in Sources */,
+				7C53727B2BBD850B000DAAF9 /* SlideAnimationDirection.swift in Sources */,
 				CEC36DAF251F737F00336F8B /* ViewController.swift in Sources */,
 				CEACCA34253747E2003F6B23 /* DrawerMenuCell.swift in Sources */,
 				CEC36DAB251F737F00336F8B /* AppDelegate.swift in Sources */,
@@ -387,7 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9K9JWHDU69;
+				DEVELOPMENT_TEAM = N2T2473XHF;
 				INFOPLIST_FILE = "Drawer Menu App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -406,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9K9JWHDU69;
+				DEVELOPMENT_TEAM = N2T2473XHF;
 				INFOPLIST_FILE = "Drawer Menu App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

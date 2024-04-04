@@ -2,7 +2,7 @@
 //  DrawerMenuCell.swift
 //  Drawer Menu App
 //
-//  Created by Artem Korzh on 14.10.2020.
+//  Created by Ram on 14.10.2020.
 //
 
 import UIKit

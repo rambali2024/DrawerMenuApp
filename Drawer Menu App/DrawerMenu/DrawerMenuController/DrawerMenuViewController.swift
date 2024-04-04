@@ -2,7 +2,7 @@
 //  DrawerMenuViewController.swift
 //  Drawer Menu App
 //
-//  Created by Artem Korzh on 26.09.2020.
+//  Created by Ram on 26.09.2020.
 //
 
 import UIKit
@@ -43,6 +43,7 @@ protocol DrawerMenuDelegate: class {
 class DrawerMenuViewController: UIViewController {
 
     @IBOutlet weak var menuTableView: UITableView!
+    var currentController: UIViewController?
 
     static var selectedOption: DrawerMenuOption = .home
 
@@ -68,7 +69,50 @@ class DrawerMenuViewController: UIViewController {
         menuTableView.register(UINib(nibName: "DrawerProfileCell", bundle: nil), forCellReuseIdentifier: "profileCell")
 
         setSelectedOption()
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
+        view.addGestureRecognizer(panGesture)
+        
     }
+    
+    @objc func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
+        let translation = recognizer.translation(in: view)
+        
+        switch recognizer.state {
+        case .changed:
+            // Move the view horizontally by adjusting its center based on the gesture translation
+            let newX = view.center.x + translation.x
+            let newY = view.center.y
+            view.center = CGPoint(x: newX, y: newY)
+            
+            // Reset translation to avoid cumulative changes
+            recognizer.setTranslation(.zero, in: view)
+            
+        case .ended:
+            // Determine whether to close or open the drawer based on its current position
+            if view.frame.origin.x < -UIScreen.main.bounds.width / 4 {
+                // Close the drawer
+                print("Right swiped called")
+                
+                UIView.animate(withDuration: 0.3) {
+                    self.view.frame.origin.x = -UIScreen.main.bounds.width
+                }
+                self.dismiss(animated: false, completion: nil)
+                presentedViewController?.dismiss(animated: true)
+            }
+            else {
+                // Open the drawer
+                UIView.animate(withDuration: 0.3) {
+                    self.view.frame.origin.x = 0
+                }
+                self.dismiss(animated: false, completion: nil)
+                presentedViewController?.dismiss(animated: true)
+            }
+            
+        default:
+            break
+        }
+    }
+
 
     private func setSelectedOption() {
         if [DrawerMenuOption.profile, DrawerMenuOption.logout].contains(Self.selectedOption) {

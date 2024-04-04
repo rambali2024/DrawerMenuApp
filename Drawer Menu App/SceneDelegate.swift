@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Drawer Menu App
 //
-//  Created by Artem Korzh on 26.09.2020.
+//  Created by Ram on 26.09.2020.
 //
 
 import UIKit
